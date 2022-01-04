@@ -22,7 +22,11 @@ const appelStore = {
         }
     },
     model_Watch: {},
-    time_job: {},
+    time_job: {
+        sat: {
+            open:11,close:24
+        }
+    },
     showModels({
         storge,
         model,
@@ -41,3 +45,6 @@ const {
 appelStore.showModels(ProMax)
 appelStore.showModels(Pro)
 appelStore.showModels(Mini)
+
+const {time_job :{sat:{open,close}} } = appelStore;
+console.log(open,close);
