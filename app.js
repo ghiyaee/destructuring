@@ -31,9 +31,13 @@ const appelStore = {
         storge,
         model,
         color,
-        price
+        price,
     }) {
         console.log(`this is a appel model ${model} ${storge}  ${price} ${color} `)
+    }
+   ,
+    midens(obj) {
+       console.log(obj);      
     }
 }
 ////// DeStructuring 
@@ -47,4 +51,9 @@ appelStore.showModels(Pro)
 appelStore.showModels(Mini)
 
 const {time_job :{sat:{open:opn,close:cls}} } = appelStore;
-console.log(opn,cls);
+console.log(opn, cls);
+
+appelStore.midens({
+    countery: 'USA',
+    ProMax
+})
