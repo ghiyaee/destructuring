@@ -50,10 +50,10 @@ appelStore.showModels(ProMax)
 appelStore.showModels(Pro)
 appelStore.showModels(Mini)
 
+const { time_job } = appelStore;
 const {time_job :{sat:{open:opn,close:cls}} } = appelStore;
 console.log(opn, cls);
-
 appelStore.midens({
     countery: 'USA',
-    ProMax
+     
 })
