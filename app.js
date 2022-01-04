@@ -46,5 +46,5 @@ appelStore.showModels(ProMax)
 appelStore.showModels(Pro)
 appelStore.showModels(Mini)
 
-const {time_job :{sat:{open,close}} } = appelStore;
-console.log(open,close);
+const {time_job :{sat:{open:opn,close:cls}} } = appelStore;
+console.log(opn,cls);
