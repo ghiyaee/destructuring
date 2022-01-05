@@ -108,13 +108,11 @@ console.log(sumt());////output 12
 
 
 function sam() {
-    const res = num.reduce((total, value) => total + value);    
-        return res
+ return num.reduce((total, value) => total + value);        
 }
 console.log( sam())//// output 12
 
 
-const nami = [];
 function namii(...nami) {
      return nami.reduce((total,value) => total + value)
  }
