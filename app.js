@@ -87,15 +87,15 @@ sum(...nu);
 
 
 
-const num = [2, 4, 6];
+const number = [2, 4, 6];
 
-function sami(a, q, w) {
+function sum1(a, q, w) {
     return a + q + w ;
 }
-console.log(sami(...num)); ///output 12
+console.log(sum1(...number)); ///output 12
 
 
-function sumt() {
+function sum2() {
     let tsum = 0;
     for (let i = 0; i < 7; i++) {
         if (i % 2 == 0) {
@@ -104,17 +104,17 @@ function sumt() {
     }
     return tsum;
 }
-console.log(sumt());////output 12
+console.log(sum2());////output 12
 
 
-function sam() {
- return num.reduce((total, value) => total + value);        
+function sum3() {
+ return number.reduce((total, value) => total + value);        
 }
-console.log( sam())//// output 12
+console.log( sum3())//// output 12
 
 
-function namii(...nami) {
-     return nami.reduce((total,value) => total + value)
+function sum4(...number) {
+     return number.reduce((total,value) => total + value)
  }
-console.log(namii(1, 2, 3, 4, 2)); //// output 12
+console.log(sum4(1, 2, 3, 4, 2)); //// output 12
  
