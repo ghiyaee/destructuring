@@ -96,13 +96,13 @@ console.log(sum1(...number)); ///output 12
 
 
 function sum2() {
-    let tsum = 0;
+    let sum= 0;
     for (let i = 0; i < 7; i++) {
         if (i % 2 == 0) {
-            tsum += i;
+            sum+= i;
         }
     }
-    return tsum;
+    return sum;
 }
 console.log(sum2());////output 12
 
