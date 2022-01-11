@@ -352,3 +352,5 @@ const fname = (fname) => {
 const full = fname('manoochehr');
 const fullname = full('ghiyaee');
 console.log(fullname);
+
+
