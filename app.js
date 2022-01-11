@@ -118,3 +118,52 @@ function sum4(...number) {
  }
 console.log(sum4(1, 2, 3, 4, 2)); //// output 12
  
+//////////////////////////bind////////////////////////////////
+const anbar1 = {
+    ssd: [],
+    gig:"GIG",
+    add(val,valM='country') {
+     return `${this.ssd.push({SSD:val+this.gig+'-'+valM})}`;
+    }
+}
+
+const anbar2 = {
+    ssd: [],
+    gig: "GIG",
+}
+
+const adding = anbar1.add;
+
+anbar1.TT=0 ;
+anbar1.conter = function (){
+    this.TT++;
+    console.log(this);
+ 
+};
+
+anbar1.add(512,'UAS');
+adding.call(anbar2, 256,'KOERA')
+const addAnbar= adding.bind(anbar2, 120,'JOPAN');
+addAnbar()
+const addAnbars= adding.bind(anbar2);
+addAnbars(60,'IRAN')
+console.log(anbar1);
+console.log(anbar2);
+document.querySelector('.added').addEventListener('click', anbar1.conter.bind(anbar1))
+
+const tax = (rate, value) => {
+    
+   console.log( rate*value+value)
+}
+tax(.7, 100);
+
+const newT = tax.bind(null, 0.7);
+newT(100);
+
+const newTax = (rate) => {
+       return function (valua)  {
+        return valua + valua * rate;
+    }
+}
+const newVal1 = newTax(.7);
+console.log( newVal1(100));
