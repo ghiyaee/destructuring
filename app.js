@@ -295,14 +295,10 @@ const anbar2 = {
     ssd: [],
     gig: "GIG",
 }
-<<<<<<< HEAD
 const anbar3 = {
     ssd: [],
     gig: "GIG",
 }
-=======
-
->>>>>>> e1416c83efae8a32e7eccc28be3cdbae11e4eddd
 const adding = anbar1.add;
 
 anbar1.TT=0 ;
@@ -317,7 +313,6 @@ adding.call(anbar2, 256,'KOERA')
 const addAnbar= adding.bind(anbar2, 120,'JOPAN');
 addAnbar()
 const addAnbars= adding.bind(anbar2);
-<<<<<<< HEAD
 addAnbars(60, 'IRAN')
 const addAanbar3 = adding.bind(anbar3)
 addAanbar3(1000,'HONKONG')
@@ -338,21 +333,6 @@ console.log(tax(.7, 100));
 ///with bind///////
 const newTex = tax.bind(null, 0.7);
 console.log( newTex(100));
-=======
-addAnbars(60,'IRAN')
-console.log(anbar1);
-console.log(anbar2);
-document.querySelector('.added').addEventListener('click', anbar1.conter.bind(anbar1))
-
-const tax = (rate, value) => {
-    
-   console.log( rate*value+value)
-}
-tax(.7, 100);
-
-const newT = tax.bind(null, 0.7);
-newT(100);
->>>>>>> e1416c83efae8a32e7eccc28be3cdbae11e4eddd
 
 const newTax = (rate) => {
        return function (valua)  {
@@ -361,7 +341,6 @@ const newTax = (rate) => {
 }
 const newVal1 = newTax(.7);
 console.log( newVal1(100));
-<<<<<<< HEAD
 
 
 const fname = (fname) => {
@@ -373,5 +352,3 @@ const fname = (fname) => {
 const full = fname('manoochehr');
 const fullname = full('ghiyaee');
 console.log(fullname);
-=======
->>>>>>> e1416c83efae8a32e7eccc28be3cdbae11e4eddd
