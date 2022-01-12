@@ -389,28 +389,32 @@ var sum = function (a, b) {
 var add5 = sum.bind(null, 5);
 console.log(add5(10));
 
-////////////////closer
-let f;
-const aa = function () {
-    const a = 2
-    f= function(){
-        console.log(a * 2);
-    }
-} 
 
-const b = function () {
-    const b = 3
+
+
+
+
+
+
+
+////////////////closure and  NO accses variable from outSide 
+
+const var1 = function () {
+    const a = 2 ///closure
+    console.log(a * 2);
+} 
+var1()
+
+let f;
+const var2 = function () {
+    const b = 3 ///closure
     f = function () {
-        console.log(b*2);
+        console.log(b * 2);
     }
 }
-
-aa();
+const b = 1000;
+var2();
 f();
-console.dir(f);
-b();
-f();
-console.dir(f);
 
 const passingers = function (n,wait) {
     const passGrop = n / 3;
@@ -421,10 +425,10 @@ const passingers = function (n,wait) {
         }, wait * 1000);
         setTimeout(() => {
             console.log(`this a time for grops ${wait}`);  
-        },wait*3000)
+        },wait*1000)
 
     },
     )
 }
-// const passGrop = 1000;
+const passGrop = 1000;
 passingers(180,5)
