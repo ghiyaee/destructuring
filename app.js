@@ -354,3 +354,28 @@ const fullname = full('ghiyaee');
 console.log(fullname);
 
 
+
+const mobiles = [
+    { appel: {} },
+    { samsung: {} },
+    { lg: {} },
+    { Xiaomi: {} },
+   function adding(){
+   return console.log(this);
+    }
+]
+const [,,,,ak] = mobiles;
+ak()
+
+const obj={
+     tax1(rate){
+       return function (val) {
+           return rate * val + val;
+    }
+  }
+}
+const taxx = obj.tax1;
+const value = taxx(.7)
+//const res=value.bind(obj)
+const res= value(100)
+console.log(res);
