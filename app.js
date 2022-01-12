@@ -400,9 +400,10 @@ console.log(add5(10));
 ////////////////closure and  NO accses variable from outSide 
 
 const var1 = function () {
-    const a = 2 ///closure
-    console.log(a * 2);
+    const a1 = 2 ///closure
+    console.log(a1 * 2);
 } 
+const a1 = 2000;
 var1()
 
 let f;
