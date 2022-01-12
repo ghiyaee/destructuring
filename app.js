@@ -375,7 +375,56 @@ const obj={
   }
 }
 const taxx = obj.tax1;
-const value = taxx(.7)
+const value = taxx.bind(null,.7)
 //const res=value.bind(obj)
-const res= value(100)
-console.log(res);
+// const rs = value(100);
+console.log(value(100));
+// console.log(rs(100));
+
+// Example showing binding some parameters
+var sum = function (a, b) {
+    return a + b;
+};
+
+var add5 = sum.bind(null, 5);
+console.log(add5(10));
+
+////////////////closer
+let f;
+const aa = function () {
+    const a = 2
+    f= function(){
+        console.log(a * 2);
+    }
+} 
+
+const b = function () {
+    const b = 3
+    f = function () {
+        console.log(b*2);
+    }
+}
+
+aa();
+f();
+console.dir(f);
+b();
+f();
+console.dir(f);
+
+const passingers = function (n,wait) {
+    const passGrop = n / 3;
+    setTimeout(function () { 
+        setTimeout(() => {
+            console.log(`this is a all passingers ${n}`);
+            console.log(`this is a grop with ${passGrop}`);
+        }, wait * 1000);
+        setTimeout(() => {
+            console.log(`this a time for grops ${wait}`);  
+        },wait*3000)
+
+    },
+    )
+}
+// const passGrop = 1000;
+passingers(180,5)
