@@ -432,4 +432,51 @@ const passingers = function (n,wait) {
     )
 }
 const passGrop = 1000;
-passingers(180,5)
+// passingers(180, 5)
+    
+////////     FUNCTIONS
+
+//// anonymous function   IIFE
+(function () {
+    console.log('function anonymous');
+})();
+ //// arrow function IIFE
+(() => console.log('arrow function '))();
+
+/////funaction named IIFE
+(function func() {
+    console.log('function Named');
+})();
+
+
+////////////////// Array 
+// pop  push  shift unshift slice splice reverse join 
+  ///slice new array but original Array no changed
+const myarr = [1, 2, 3, 4, 5];
+console.log(myarr.slice(2));///out new arry [3,4,5]
+console.log(myarr.slice(2, 5)); /// out new array if undefined value befor value show [3,4,5]
+console.log((myarr.slice(myarr.length - 2))); /// out new array az end start;
+console.log(myarr.slice(-2));////////////////////^^^^^^^^^^^^^^^^^^^^^^^^^^^^;
+console.log(myarr.slice()); /// out new array copy;
+console.log([...myarr]);   ///^^^^^^^^out new array sperad ;
+
+////splice new Array but original Array changed for DELETD A INDEX Array
+
+//  console.log(myarr.splice(2));/// out new Array [3,4,5] and oigi Array [1,2]
+// console.log(myarr.pop());
+// console.log(myarr.splice(1,3)); /// out new Array index one place conter index second
+console.log(myarr);
+
+//// REVERSE   in method change original Array
+const myarr1=[10,9,8,8,7,6]
+console.log(myarr1.reverse()); ///[6,7,8,9,10]
+
+
+///CONTACT 
+console.log([...myarr,...myarr1]);  ////Array [1,2,3,4,5,6,7,8,9,10] unpack...
+console.log(myarr.concat(myarr1)); // new Array[1,2,3,4,5,6,7,8,910]
+
+
+/// join
+
+console.log(myarr.join(','));// new  [1,2,3,4,5,6] join=>  1,2,3,4,5,6;
