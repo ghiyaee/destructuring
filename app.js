@@ -473,7 +473,8 @@ console.log(myarr1.reverse()); ///[6,7,8,9,10]
 
 
 ///CONTACT 
-console.log([...myarr,...myarr1]);  ////Array [1,2,3,4,5,6,7,8,9,10] unpack...
+const newarry = [...myarr, ...myarr1]
+console.log(newarry);  ////Array [1,2,3,4,5,6,7,8,9,10] unpack...
 console.log(myarr.concat(myarr1)); // new Array[1,2,3,4,5,6,7,8,910]
 
 
