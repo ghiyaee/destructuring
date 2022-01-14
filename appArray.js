@@ -50,7 +50,7 @@ const myarr = [1, 2, 3, 4, 5];
 // const fl = newarry.findIndex((fc) => fc >1); /// in need a function if find firts value return index value
 // console.log(fl);
 
- /////// AT FOR ARRAY AND STRING
+ /////// method AT FOR ARRAY AND STRING
 
 //  const myarrr = [1, 2, 3, 4, 5];
 // console.log(myarr.at(-3)); ///in method find position indexs and retrun values index
@@ -66,4 +66,17 @@ console.log(newa);
         console.log(`this a index ${i} ${Math.abs(loop)}`);
     }
      loop > 0 ? console.log(`this a index ${i} ${loop}`) : console.log(`this a index ${i} ${Math.abs(loop)}`)
-})
+ })
+
+
+ ///// MAP NAD SET FOR SAVE A KEYS ,VALUES 
+const newt = newa.map(loop => loop);
+console.log(newa);
+const newM = new Map();// NEW OBJ AZ MAP
+newM.set('appel', 100);/// ADD NEW KEY AND VALUE TO MAP
+newM.set('samsung', 120); /// ADD NEW KEY AND VALUE TO MAP
+newM.set('lg', 50); /// ADD NEW KEY AND VALUE TO MAP
+console.log(newM);
+// newM.forEach((value, key) => console.log(`${key}:${value} `))
+for (let [key, value] of newM) { console.log(`${key + ' ' + value} `) }
+console.log( newM.get('lg')); /// READING A KEY
