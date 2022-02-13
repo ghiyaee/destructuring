@@ -1,0 +1,57 @@
+.clock{
+    text-align: center;
+    margin: 100px auto;
+}
+.clock span{
+    background:rgb(44, 33, 33);
+    color: rgb(248, 248, 3);
+    padding: 3rem;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+ .clock span:nth-child(1)::after{
+     content: "hours";
+     position: absolute;
+     bottom: 15px;
+     right: 30px;
+ }
+  .clock span:nth-child(2)::after{
+     content: "minuts";
+     position: absolute;
+     bottom: 15px;
+     right:23px;
+ }
+  .clock span:nth-child(3)::after{
+     content: "seconds";
+     position: absolute;
+     bottom: 15px;
+     right: 23px;
+ }
+
+ @media(max-width:500px){
+     .clcock{
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+    }
+    .clock span{
+     margin:10px auto ;
+     display: flex;
+     padding: 1rem;
+     width: 50%;
+     font-weight: bold;
+ }
+  .clock span:nth-child(1)::after{
+     content: "hours";
+    
+ }
+  .clock span:nth-child(2)::after{
+     content: "minuts";
+   
+ }
+  .clock span:nth-child(3)::after{
+     content: "seconds";
+ 
+ }
+ }

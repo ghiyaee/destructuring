@@ -151,18 +151,46 @@ const filter =
 
 ///////date & time
 
-const now = new Date();
-console.log(now);
-console.log(now.getFullYear());////سال
-console.log(now.getMonth());//////ماه
-console.log(now.getDate()); ////ایندکس روز هفته
-console.log(now.getDay()); ////روز
-console.log(now.getHours()); ////ساعت
-console.log(now.getMinutes()); ////دقیقه
-console.log(now.getSeconds()); ////ثانیه
-console.log(now.getTime()); ////ساعت شروع از سال 1970 تا به روز
-console.log(now.toDateString()); ////سال ماه اندیکس هفته روز
-console.log(now.toTimeString()); ////ساعت جهانی
-console.log(now.toLocaleString()); ////ساعت محلی
+const nows = new Date();
+console.log(nows);
+// console.log(now.getFullYear());////سال
+// console.log(now.getMonth());//////ماه
+// console.log(now.getDate()); ////ایندکس روز هفته
+// console.log(now.getDay()); ////روز
+// console.log(now.getHours()); ////ساعت
+// console.log(now.getMinutes()); ////دقیقه
+// console.log(now.getSeconds()); ////ثانیه
+// console.log(now.getTime()); ////ساعت شروع از سال 1970 تا به روز
+// console.log(now.toDateString()); ////سال ماه اندیکس هفته روز
+// console.log(now.toTimeString()); ////ساعت جهانی
+// console.log(now.toLocaleString()); ////ساعت محلی
 
+const myd = new Date('april 22 1968 24:00:00');
+const now=new Date()
+// console.log(now.getTime(), myd.getTime());
+const diff = now.getTime() - myd.getTime();
+// console.log(diff);
+const mins = Math.round(diff/1000/60);
+// console.log(mins);
+const Hours = Math.round(mins / 60);
+// console.log(Hours);
+const day = Math.round(Hours / 24/30/12);
+// console.log(day);
 
+// console.log(now.getHours(),now.getMinutes(),now.getSeconds());
+
+//////////// clock digital
+function clock() {
+    const now = new Date();
+    const h = now.getHours();
+    const m = now.getMinutes();
+    const s = now.getSeconds();
+    
+    const html =
+        `<span>${h}</span> :
+         <span>${m}</span> :
+          <span>${s}</span>`;
+
+    document.querySelector('.clock').innerHTML = html;
+}
+ setInterval(clock,1000)
