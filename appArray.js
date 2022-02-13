@@ -193,4 +193,13 @@ function clock() {
 
     document.querySelector('.clock').innerHTML = html;
 }
- setInterval(clock,1000)
+setInterval(clock, 1000)
+ 
+ ///// libray data-fns for date and time at js
+
+ ////// asynchronous
+
+const request = new Request('https://jsonplaceholder.typicode.com/todos/',{method:'GET'});
+fetch(request).then(res => res.json()).then(res =>  res.forEach(res=> console.log( res)));
+
+
