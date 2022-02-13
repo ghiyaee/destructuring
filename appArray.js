@@ -57,26 +57,112 @@ const myarr = [1, 2, 3, 4, 5];
 // console.log('manoochehr'.at(2));///if not inter value retrun first value
  
 const newa = [200, -550, 300, -650];
-console.log(newa);
+// console.log(newa);
  newa.forEach((loop,i,arr) => {
     if (loop > 0) {
-        console.log(`this a index ${i} ${loop}`)
+        // console.log(`this a index ${i} ${loop}`)
     }
     else {
-        console.log(`this a index ${i} ${Math.abs(loop)}`);
+        // console.log(`this a index ${i} ${Math.abs(loop)}`);
     }
-     loop > 0 ? console.log(`this a index ${i} ${loop}`) : console.log(`this a index ${i} ${Math.abs(loop)}`)
+    //  loop > 0 ? console.log(`this a index ${i} ${loop}`) : console.log(`this a index ${i} ${Math.abs(loop)}`)
  })
+ const newt = newa.map(loop => loop);
+//  console.log(newa);
 
 
  ///// MAP NAD SET FOR SAVE A KEYS ,VALUES 
-const newt = newa.map(loop => loop);
-console.log(newa);
 const newM = new Map();// NEW OBJ AZ MAP
 newM.set('appel', 100);/// ADD NEW KEY AND VALUE TO MAP
 newM.set('samsung', 120); /// ADD NEW KEY AND VALUE TO MAP
 newM.set('lg', 50); /// ADD NEW KEY AND VALUE TO MAP
-console.log(newM);
+// console.log(newM);
 // newM.forEach((value, key) => console.log(`${key}:${value} `))
-for (let [key, value] of newM) { console.log(`${key + ' ' + value} `) }
-console.log( newM.get('lg')); /// READING A KEY
+// for (let [key, value] of newM) { console.log(`${key + ' ' + value} `) }
+// console.log(newM.get('lg')); /// READING A KEY
+
+
+const a = {};
+const b = {};
+const newobj = new Map([[a, 20], [b, 50]]);
+newobj.set('c', 500)
+newobj.set('c', 'JS')
+newobj.set('z','5')
+// console.log(newobj);
+
+////////////// filter   
+const numberF = [10, 20, 30, 5, 50, 100,];
+const numberO = [
+    { name: 'manoochehr', active: true, age: 50 },
+    { name: "ali", active: false, age: 36 },
+    { name: 'reza', active: false, age: 20 },
+    {name:'farnosh',active:true,age:53}
+]
+
+// const newfilter = numberO.filter(num => num.active && num.age >50);
+
+// console.log(newfilter);
+// console.log(numberO);
+
+
+/////////MAP
+// const helf = numberO.map(num => {
+//     if (num.age == 53) {
+//         num.age = num.age / 2;
+//         // {
+//         //  name: num.name,
+//         //  active: num.active,
+//         //     age: num.age / 2
+//         // }
+//         return num
+//     } else {
+//          return {
+//              num
+//          }
+//     }
+// });
+// console.log(numberO,helf);
+// console.log(numberF);
+
+
+////////reduce
+
+// const total = numberO.reduce((acc, curr) => {
+//     if (curr.name === 'manoochehr') {
+//         acc += curr.age/2;
+//     }
+//     return acc;
+// }, 5);
+
+// console.log(total);
+const n = 'manoochehr';
+const number = [20, 10, 5, 55, 65, 1, 75]
+numberO.sort((a, b) => a.age-b.age );
+// console.log(numberO);
+
+const filter =
+    numberO
+        .filter(fill => fill.active)
+        .map(fill => `${fill.name} this is active ${fill.active} ${fill.age*2}`);
+
+// console.log(filter);
+  
+
+
+///////date & time
+
+const now = new Date();
+console.log(now);
+console.log(now.getFullYear());////سال
+console.log(now.getMonth());//////ماه
+console.log(now.getDate()); ////ایندکس روز هفته
+console.log(now.getDay()); ////روز
+console.log(now.getHours()); ////ساعت
+console.log(now.getMinutes()); ////دقیقه
+console.log(now.getSeconds()); ////ثانیه
+console.log(now.getTime()); ////ساعت شروع از سال 1970 تا به روز
+console.log(now.toDateString()); ////سال ماه اندیکس هفته روز
+console.log(now.toTimeString()); ////ساعت جهانی
+console.log(now.toLocaleString()); ////ساعت محلی
+
+
